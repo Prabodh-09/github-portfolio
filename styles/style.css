@@ -1156,3 +1156,44 @@ nav a:hover::after {
    /* Add this to your CSS */
    header .logo { display: block; }
    .hero:first-child ~ header nav { display: none; }
+
+ /* Styles for mobile devices */
+@media (max-width: 600px) {
+    body {
+       font-size: 14px;
+    }
+.container {
+     width: 100%;
+    padding: 10px;
+}
+   }
+
+   /* Styles for tablets and larger devices */
+   @media (min-width: 601px) {
+       body {
+           font-size: 16px;
+       }
+       .container {
+           width: 80%;
+           margin: auto;
+       }
+   }
+
+   .flex-container {
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   .flex-item {
+       flex: 1 1 300px; /* Grow, shrink, and set a base width */
+   }
+   
+
+/* Footer Styles */
+footer {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    padding: 20px 50px;
+    text-align: center;
+    position: relative;
+}
