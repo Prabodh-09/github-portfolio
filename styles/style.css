@@ -1165,7 +1165,7 @@ nav a:hover::after {
 .container {
      width: 100%;
     padding: 10px;
-}
+       }
    }
 
    /* Styles for tablets and larger devices */
@@ -1197,3 +1197,4 @@ footer {
     text-align: center;
     position: relative;
 }
+
