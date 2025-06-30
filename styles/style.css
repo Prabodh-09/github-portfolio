@@ -159,7 +159,7 @@ nav a:hover::after {
 
 /* Content Sections */
 .content-section {
-    padding: 70px 50px;
+    padding: 70px ;
     min-height: 100vh;
 }
 
