@@ -238,6 +238,93 @@ nav a:hover::after {
         width: 250px;
         height: 250px;
     }
+
+    /* Hide nav menu by default on mobile */
+    nav#navMenu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: rgba(10, 25, 47, 0.95);
+        border-radius: 8px;
+        padding: 20px;
+        width: 200px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        z-index: 1001;
+    }
+
+    nav#navMenu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav#navMenu ul li {
+        margin-bottom: 10px;
+    }
+
+    nav#navMenu ul li a {
+        font-size: 1.2rem;
+        display: block;
+    }
+
+    /* Show hamburger menu */
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .hamburger-menu .bar {
+        height: 3px;
+        width: 100%;
+        background-color: #64ffda;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Adjust header padding */
+    header {
+        padding: 15px 20px;
+    }
+}
+
+/* Show nav menu when active */
+nav#navMenu.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hide hamburger menu on larger screens */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+
+    nav#navMenu {
+        display: block !important;
+        position: static;
+        background: none;
+        padding: 0;
+        width: auto;
+        box-shadow: none;
+    }
+
+    nav#navMenu ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    nav#navMenu ul li {
+        margin-bottom: 0;
+    }
+
+    nav#navMenu ul li a {
+        font-size: 16px;
+    }
 }
 /* Education Section Styles */
 .section-title {

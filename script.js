@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const lightTransition = document.getElementById('lightTransition');
     const mainContent = document.getElementById('main-content');
     const heroSection = document.querySelector('.hero');
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navMenu = document.getElementById('navMenu');
     
     // Create floating words
     function createFloatingWords() {
@@ -84,6 +86,20 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // Hamburger menu toggle
+    if (hamburgerMenu && navMenu) {
+        hamburgerMenu.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+
+        // Optional: close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!navMenu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    }
 });
 
 // Add this to your existing main.js file
