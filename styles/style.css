@@ -1198,3 +1198,44 @@ footer {
     position: relative;
 }
 
+
+    /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Horizontal nav on larger screens */
+        justify-content: flex-end;
+    }
+    .about-container {
+        flex-direction: row; /* Side-by-side layout for about */
+        align-items: center;
+    }
+    .skills-container {
+        flex-direction: row; /* Side-by-side skill columns */
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    }
+    .timeline-item {
+        /* Revert or adjust timeline for larger screens */
+        padding-left: 80px; /* Original padding */
+        border-left: none; /* Remove mobile border */
+    }
+    .timeline-marker {
+        left: -30px; /* Original marker position */
+    }
+}
+
+    /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* Three columns on desktops */
+    }
+}
+
+    /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr); /* Four columns on very large screens */
+    }
+}
+    
