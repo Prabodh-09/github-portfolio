@@ -1,614 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prabodh Obadiah - Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/animations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prabodh Obadiah | Portfolio</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-    <header class="site-header">
-        <div class="logo">Prabodh's Portfolio</div>
-        <div class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle navigation" tabindex="0">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav id="navMenu">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact-details">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home" class="hero fullscreen-section">
-        <div class="hero-content">
-            <h1>Hello, I am Prabodh Obadiah...</h1>
-            <h2>Python and Web Developer</h2>
-            <p class="clumsy-label">Looks clumsy right?</p>
-            <button class="clean-btn" id="cleanButton">Clean It</button>
+  <!-- Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Prabodh</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop id="heroVideo">
+      <source src="your-video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-content">
+      <h1 id="typing"></h1>
+      <p>Full Stack ML Engineer | Blockchain Lead | Innovator</p>
+    </div>
+  </section>
+
+  <!-- Main Sections -->
+  <main class = 'container'>
+    <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+        <div class="about-image">
+        <img src="images/profile.jpg" alt="Prabodh Obadiah" />
         </div>
-        <div class="background-words" id="backgroundWords"></div>
+        <div class="about-text">
+        <p>
+            I am a tech enthusiast with strong skills in Python, Artificial Intelligence, Machine Learning,
+            Web Development, and Blockchain. I love building innovative solutions and explaining complex
+            ideas clearly. I’m driven by curiosity and passionate about contributing to projects that matter.
+            I also enjoy leading teams and sharing knowledge through events and workshops.
+        </p>
+        </div>
+    </div>
     </section>
 
-    <div class="light-transition" id="lightTransition"></div>
+    <section id="education">
+    <h2>Education</h2>
+    <div class="edu-timeline">
+        
+        <div class="edu-card">
+        <div class="edu-year">2022 - Present</div>
+        <div class="edu-content">
+            <h3>B.Tech in CSE</h3>
+            <p>KG Reddy College Of Engineering and Technology</p>
+            <p>CGPA: 8.62 / 81.5%</p>
+        </div>
+        </div>
 
-    <main id="main-content">
-        <!--About Me Section-->
-        <section class="content-section" id="about">
-            <div class="about-container">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <h2 class="name" style="font-style: italic;">A.Prabodh Obadiah</h2>
-                    <p>👋 Hey there! I'm a passionate technology enthusiast currently pursuing my B.Tech final year in Computer Science and Engineering at KG Reddy College of Engineering and Technology. With hands-on skills in Python, AI/ML, Web Development, and Blockchain, I thrive at the intersection of innovation and problem-solving. I take pride in simplifying complex ideas through clear communication and constantly seek opportunities to learn and grow. Fueled by curiosity and a drive to create impact, I aspire to contribute to meaningful tech projects where I can blend my technical abilities with leadership to make a real difference.</p>
-                </div>
-                <div class="profile-image">
-                    <img src="images/profile.jpg" alt="Prabodh Obadiah">
-                </div>
-            </div>
-        </section>
+        <div class="edu-card">
+        <div class="edu-year">2020 - 2022</div>
+        <div class="edu-content">
+            <h3>Intermediate – MPC</h3>
+            <p>Sri Abhida Junior College</p>
+            <p>Percentage: 96.5%</p>
+        </div>
+        </div>
 
+        <div class="edu-card">
+        <div class="edu-year">Till 2020</div>
+        <div class="edu-content">
+            <h3>Schooling</h3>
+            <p>Don Bosco School</p>
+            <p>Percentage: 84%</p>
+        </div>
+        </div>
 
-        <section class="content-section" id="education">
-            <h2 class="section-title">Education Journey</h2>
-            <div class="timeline">
-                <!-- Current Education -->
-                <div class="timeline-item current">
-                    <div class="timeline-badge">
-                        <div class="animated-progress" data-percent="81.5">
-                            <svg class="progress-circle" viewBox="0 0 100 100">
-                                <circle class="progress-circle-bg" cx="50" cy="50" r="45"/>
-                                <circle class="progress-circle-fill" cx="50" cy="50" r="45"/>
-                            </svg>
-                            <span class="percent-value">81.5%</span>
-                        </div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Bachelor's of Technology</h3>
-                        <div class="timeline-details">
-                            <span class="institution">
-                                <i class="fas fa-university"></i> KG Reddy College Of Engineering and Technology
-                            </span>
-                            <span class="duration">
-                                <i class="fas fa-calendar-alt"></i> 10/2022 - Present
-                            </span>
-                            <span class="field">
-                                <i class="fas fa-laptop-code"></i> Computer Science and Engineering
-                            </span>
-                        </div>
-                        <div class="achievement-badge">
-                            <span>Current CGPA</span>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    </section>
+    <section id="skills">
+    <h2>Skills</h2>
+    
+    <!-- Technical Skills -->
+    <div class="skills-container">
+        <div class="skill-box">
+        <h3>Python</h3>
+        <div class="progress-bar"><div class="progress" data-percent="90%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>HTML/CSS/JS</h3>
+        <div class="progress-bar"><div class="progress" data-percent="85%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>Machine Learning</h3>
+        <div class="progress-bar"><div class="progress" data-percent="80%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>Blockchain</h3>
+        <div class="progress-bar"><div class="progress" data-percent="75%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>Django / Node.js</h3>
+        <div class="progress-bar"><div class="progress" data-percent="70%"></div></div>
+        </div>
+    </div>
 
-                <!-- Intermediate -->
-                <div class="timeline-item">
-                    <div class="timeline-badge">
-                        <div class="score-display">96.5%</div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Intermediate</h3>
-                        <div class="timeline-details">
-                            <span class="institution">
-                                <i class="fas fa-school"></i> Sri Abhida Junior College
-                            </span>
-                            <span class="duration">
-                                <i class="fas fa-calendar-alt"></i> 08/2020 - 05/2022
-                            </span>
-                            <span class="field">
-                                <i class="fas fa-atom"></i> MPC
-                            </span>
-                        </div>
-                        <div class="performance-bar">
-                            <div class="bar-fill" style="width: 96.5%"></div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Soft Skills -->
+    <h3 style="margin-top: 3rem;">Soft Skills</h3>
+    <div class="soft-skills">
+        <div class="soft-card">
+        <span>🤝</span>
+        <h4>Team Leadership</h4>
+        </div>
+        <div class="soft-card">
+        <span>🗣️</span>
+        <h4>Communication</h4>
+        </div>
+        <div class="soft-card">
+        <span>🧩</span>
+        <h4>Problem Solving</h4>
+        </div>
+        <div class="soft-card">
+        <span>📅</span>
+        <h4>Time Management</h4>
+        </div>
+        <div class="soft-card">
+        <span>🎯</span>
+        <h4>Goal-Oriented</h4>
+        </div>
+    </div>
+    </section>
 
-                <!-- Schooling -->
-                <div class="timeline-item">
-                    <div class="timeline-badge">
-                        <div class="score-display">84%</div>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Schooling</h3>
-                        <div class="timeline-details">
-                            <span class="institution">
-                                <i class="fas fa-graduation-cap"></i> Don Bosco School
-                            </span>
-                            <span class="duration">
-                                <i class="fas fa-calendar-alt"></i> Completed 04/2020
-                            </span>
-                        </div>
-                        <div class="performance-bar">
-                            <div class="bar-fill" style="width: 84%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-grid">
 
-        <section class="content-section" id="skills">
-            <h2 class="section-title">My Skills</h2>
-            
-            <div class="skills-container">
-                <!-- Technical Skills -->
-                <div class="skills-column">
-                    <h3 class="skills-header">
-                        <i class="fas fa-code"></i> Technical Skills
-                    </h3>
-                    
-                    <div class="skill-category">
-                        <h4 class="category-title">Programming Languages</h4>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Python (Frameworks & Libraries)</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>C Programming</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="85"></div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="cert-card">
+        <img src="images/sap.png" alt="SAP Certification" />
+        <div class="cert-info">
+            <h3>SAP - Emerging Technologies</h3>
+            <p>Under Code Unnati Program by SAP & TASK.</p>
+        </div>
+        </div>
 
-                    <div class="skill-category">
-                        <h4 class="category-title">Web Development</h4>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>HTML/CSS</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>JavaScript</span>
-                                <span>88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>NodeJS & Django</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-level="80"></div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="cert-card">
+        <img src="images/ds.png" alt="Internshala Data Science" />
+        <div class="cert-info">
+            <h3>Internshala - Data Science</h3>
+            <p>Certified by Skill India, NDSC, IITM Pravartak.</p>
+        </div>
+        </div>
 
-                    <div class="skill-category">
-                        <h4 class="category-title">UI/UX Design</h4>
-                        <div class="skills-tags">
-                            <span class="skill-tag">Figma</span>
-                            <span class="skill-tag">Visme</span>
-                            <span class="skill-tag">Canva</span>
-                            <span class="skill-tag">Maze</span>
-                        </div>
-                    </div>
+        <div class="cert-card">
+        <img src="images/ibm.png" alt="IBM Machine Learning" />
+        <div class="cert-info">
+            <h3>IBM - Machine Learning</h3>
+            <p>By IBM Skills Build & CSRBOX with internship.</p>
+        </div>
+        </div>
 
-                    <div class="skill-category">
-                        <h4 class="category-title">Technologies</h4>
-                        <div class="skills-tags">
-                            <span class="skill-tag">Web Development</span>
-                            <span class="skill-tag">Data Science</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Blockchain</span>
-                        </div>
-                    </div>
+        <div class="cert-card">
+        <img src="images/bc.png" alt="Blockchain Event" />
+        <div class="cert-info">
+            <h3>Blockchain - Certificate of Appreciation</h3>
+            <p>For organizing events, workshops, competitions.</p>
+        </div>
+        </div>
 
-                    <div class="skill-category">
-                        <h4 class="category-title">Other Tools</h4>
-                        <div class="skills-tags">
-                            <span class="skill-tag">MS Office Suite</span>
-                            <span class="skill-tag">GitHub</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Soft Skills -->
-                <div class="skills-column">
-                    <h3 class="skills-header">
-                        <i class="fas fa-users"></i> Soft Skills
-                    </h3>
-                    
-                    <div class="soft-skills-container">
-                        <div class="soft-skill-item">
-                            <div class="soft-skill-icon">
-                                <i class="fas fa-chess-king"></i>
-                            </div>
-                            <div class="soft-skill-info">
-                                <h4>Leadership</h4>
-                                <p>Ability to guide and inspire team members</p>
-                            </div>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
+    </div>
+    </section>
+    <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
 
-                        <div class="soft-skill-item">
-                            <div class="soft-skill-icon">
-                                <i class="fas fa-comments"></i>
-                            </div>
-                            <div class="soft-skill-info">
-                                <h4>Communication</h4>
-                                <p>Clear articulation of complex ideas</p>
-                            </div>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
+        <div class="project-card">
+        <div class="project-image">
+            <img src="images/rc.png" alt="ReviveCart" />
+        </div>
+        <div class="project-content">
+            <h3>ReviveCart</h3>
+            <p>An AI-powered e-commerce platform offering discounted near-expiry products using ML-based dynamic pricing.</p>
+            <span>Tech Stack: Node.js, ML, MongoDB</span>
+            <a href="https://github.com/Prabodh-09/revivecart" target="_blank">View on GitHub</a>
+        </div>
+        </div>
 
-                        <div class="soft-skill-item">
-                            <div class="soft-skill-icon">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <div class="soft-skill-info">
-                                <h4>Management</h4>
-                                <p>Effective organization and delegation</p>
-                            </div>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
+        <div class="project-card">
+        <div class="project-image">
+            <img src="images/FRG.png" alt="Food Recipe Generator" />
+        </div>
+        <div class="project-content">
+            <h3>Food Recipe Generator</h3>
+            <p>ML/NLP-based web app that recommends recipes based on ingredients entered by the user. Built with KNN & text processing.</p>
+            <span>Tech Stack: Python, Flask, NLP</span>
+        </div>
+        </div>
 
-                        <div class="soft-skill-item">
-                            <div class="soft-skill-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div class="soft-skill-info">
-                                <h4>Problem Solving</h4>
-                                <p>Innovative solutions to complex challenges</p>
-                            </div>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="project-card">
+        <div class="project-image">
+            <img src="images/IMGR.png" alt="Vision Background Removal" />
+        </div>
+        <div class="project-content">
+            <h3>Vision Background Removal</h3>
+            <p>Deep learning model to remove backgrounds from images using segmentation and OpenCV.</p>
+            <span>Tech Stack: Python, DL, OpenCV</span>
+        </div>
+        </div>
 
+        <div class="project-card">
+        <div class="project-image">
+            <img src="images/IRIS.png" alt="Iris Classification" />
+        </div>
+        <div class="project-content">
+            <h3>Iris Classification</h3>
+            <p>ML model to classify Iris flower species based on petal/sepal dimensions. Trained using scikit-learn.</p>
+            <span>Tech Stack: Python, scikit-learn</span>
+        </div>
+        </div>
 
-        <section class="content-section" id="projects">
-            <h2 class="section-title">My Works</h2>
-            
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-tile">
-                    <div class="project-img-container">
-                        <img src="images/IRIS.png" alt="IRIS Classification">
-                        <div class="project-glass-overlay">
-                            <h3>IRIS Classification</h3>
-                            <span class="project-date">08/2024</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <p>Machine learning model to classify iris flower species</p>
-                        <div class="tech-tags">
-                            <span>Python</span>
-                            <span>Scikit-learn</span>
-                            <span>Pandas</span>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    </section>
 
-                <!-- Project 2 -->
-                <div class="project-tile">
-                    <div class="project-img-container">
-                        <img src="images/IMGR.png" alt="Background Removal">
-                        <div class="project-glass-overlay">
-                            <h3>Vision Background Removal</h3>
-                            <span class="project-date">01/2025</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <p>Deep learning model for automatic background removal</p>
-                        <div class="tech-tags">
-                            <span>Python</span>
-                            <span>OpenCV</span>
-                            <span>TensorFlow</span>
-                        </div>
-                    </div>
-                </div>
+    <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-container">
 
-                <!-- Project 3 -->
-                <div class="project-tile">
-                    <div class="project-img-container">
-                        <img src="images/FRG.png" alt="Food Recipe Generator">
-                        <div class="project-glass-overlay">
-                            <h3>Food Recipe Generator</h3>
-                            <span class="project-date">03/2025 - Present</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <p>ML web app that suggests recipes based on ingredients</p>
-                        <div class="tech-tags">
-                            <span>NLP</span>
-                            <span>Flask</span>
-                            <span>KNN</span>
-                        </div>
-                    </div>
-                </div>
+        <div class="experience-card">
+        <div class="exp-header">
+            <h3>IBM SkillsBuild (Intern)</h3>
+            <span class="exp-date">Sep 2024 – Oct 2024</span>
+        </div>
+        <p>
+            1-month virtual internship under IBM SkillsBuild and CSRBOX. Gained hands-on knowledge in AI/ML concepts with practical tasks and mentorship.
+        </p>
+        </div>
 
-                <!-- Project 4 -->
-                <div class="project-tile">
-                    <div class="project-img-container">
-                        <img src="images/RC.png" alt="Revive Cart">
-                        <div class="project-glass-overlay">
-                            <h3>Revive Cart</h3>
-                            <span class="project-date">12/2025 - Present</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <p>AI e-commerce platform for discounted near-expiry products</p>
-                        <div class="tech-tags">
-                            <span>Django</span>
-                            <span>ML</span>
-                            <span>Team Lead</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="experience-card">
+        <div class="exp-header">
+            <h3>Sparks To Ideas (Intern)</h3>
+            <span class="exp-date">May 2025 – Jun 2025</span>
+        </div>
+        <p>
+            Completed 1-month online internship focused on web designing and frontend fundamentals. Built dynamic UI components and practiced responsive layouts.
+        </p>
+        </div>
 
-        <section class="content-section" id="certifications">
-            <h2 class="section-title">Certifications</h2>
-            
-            <div class="certifications-grid">
-                <!-- Certification 1 -->
-                <div class="certification-card">
-                    <img src="images/sap.png" alt="SAP Advance Course on Emerging Technologies">
-                    <div class="certification-info">
-                        <h3>SAP Advance Course on Emerging Technologies</h3>
-                        <p>Course under the Code Unnati Program, sponsored by SAP and organized by Edunet Foundation and TASK.</p>
-                    </div>
-                </div>
+    </div>
+    </section>
+    <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="achievement-grid">
 
-                <!-- Certification 2 -->
-                <div class="certification-card">
-                    <img src="images/ds.jpeg" alt="Internshala Course on Data Science">
-                    <div class="certification-info">
-                        <h3>Internshala Course on Data Science</h3>
-                        <p>Certified by Skill India, NDSC, and IITM Pravartak.</p>
-                    </div>
-                </div>
+        <div class="achievement-card">
+        <h3>President – Blockchain Club</h3>
+        <span class="achievement-date">Jul 2024 – Present</span>
+        <p>
+            Led the Blockchain Club at KG Reddy College. Conducted 3 hands-on blockchain workshops and organized the IKARUS technical fest.
+        </p>
+        </div>
 
-                <!-- Certification 3 -->
-                <div class="certification-card">
-                    <img src="images/ibm.png" alt="IBM Skills Build">
-                    <div class="certification-info">
-                        <h3>IBM Skills Build</h3>
-                        <p>Machine Learning course by IBM Skills Build with CSRBOX along with the internship program.</p>
-                    </div>
-                </div>
+        <div class="achievement-card">
+        <h3>Top-5 – Code Innovation Marathon</h3>
+        <span class="achievement-date">Mar 2025</span>
+        <p>
+            Secured a Top-5 position in SAP Code Innovation Marathon for the project “ReviveCart” organized by Edunet Foundation & TASK.
+        </p>
+        </div>
 
-                <!-- Certification 4 -->
-                <div class="certification-card">
-                    <img src="images/bc.png" alt="Certificate of Appreciation">
-                    <div class="certification-info">
-                        <h3>Certificate of Appreciation</h3>
-                        <p>For successfully organizing technical events, workshops, and competitions.</p>
-                    </div>
-                </div>
-                <!-- Certification 5 -->
-                <div class="certification-card">
-                    <img src="images/dap.png" alt="Data Analysis with Python">
-                    <div class="certification-info">
-                        <h3>Data Analysis with Python</h3>
-                        <p>For successfully completing the Data Analysis with Python course.</p>
-                    </div>
-                </div>
+    </div>
+    </section>
+    <section id="languages">
+    <h2>Languages Known</h2>
+    <div class="language-grid">
 
+        <div class="language-card">
+        <h3>English</h3>
+        <p>Full Professional Proficiency</p>
+        </div>
 
-                <!-- Certification 6 -->
-                <div class="certification-card">
-                    <img src="images/pds.png" alt="Python for Data Science">
-                    <div class="certification-info">
-                        <h3>Python for Data Science</h3>
-                        <p>For successfully completing the Python for Data Science course.</p>
-                    </div>
-                </div>
+        <div class="language-card">
+        <h3>Telugu</h3>
+        <p>Full Professional Proficiency</p>
+        </div>
 
-                <!-- Certification 7 -->
-                <div class="certification-card">
-                    <img src="images/mcp.png" alt="Programming for Everybody(Getting Started with Python)">
-                    <div class="certification-info">
-                        <h3>Programming for Everybody(Getting Started with Python)</h3>
-                        <p>For successfully completing the Python Programming course.</p>
-                    </div>
-                </div>
+        <div class="language-card">
+        <h3>Hindi</h3>
+        <p>Full Professional Proficiency</p>
+        </div>
 
-                <!-- Certification 8 -->
-                <div class="certification-card">
-                    <img src="images/uc.png" alt="Microsoft Office 365 Essential Skills">
-                    <div class="certification-info">
-                        <h3>Microsoft Office 365 Essential Skills</h3>
-                        <p>For successfully completing the Microsoft Office 365 Essential Skills course.</p>
-                    </div>
-                </div>
+        <div class="language-card">
+        <h3>Spanish</h3>
+        <p>Elementary Proficiency</p>
+        </div>
 
+    </div>
+    </section>
 
-            </div>
-        </section>
+    <!-- same content from previous version (about to contact) -->
+    <!-- you can paste the earlier main sections here unchanged -->
+  
+    <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-grid">
 
-        <section class="content-section" id="experience">
-            <h2 class="section-title">Work Experience</h2>
-            
-            <div class="simple-timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>IBM SkillsBuild Intern</h3>
-                        <div class="timeline-meta">
-                            <span class="timeline-date">Sep 2024 - Oct 2024</span>
-                            <span class="timeline-location">Remote</span>
-                        </div>
-                        <ul class="timeline-details">
-                            <li>Completed training in AI and cloud computing</li><br>
-                            <li>Worked on real-world projects under mentorship</li>
-                            <li>Earned professional certification</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="contact-item">
+        <span>📧</span>
+        <h3>Email</h3>
+        <p><a href="mailto:prabodhobadiah@gmail.com">prabodhobadiah@gmail.com</a></p>
+        </div>
 
-                <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Blockchain Club President</h3>
-                        <div class="timeline-meta">
-                            <span class="timeline-date">Jul 2024 - Present</span>
-                            <span class="timeline-location">KG Reddy College</span>
-                        </div>
-                        <ul class="timeline-details">
-                            <li>Conducted 3 hands-on blockchain workshops</li>
-                            <li>Led event planning for IKARUS technical fest</li>
-                            <li>Mentored 50+ students</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="contact-item">
+        <span>📞</span>
+        <h3>Phone</h3>
+        <p><a href="tel:+919390806798">+91 93908 06798</a></p>
+        </div>
 
+        <div class="contact-item">
+        <span>📍</span>
+        <h3>Location</h3>
+        <p>Hyderabad, India</p>
+        </div>
 
+        <div class="contact-item">
+        <span>💼</span>
+        <h3>LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/prabodh-techexplorer" target="_blank">/prabodh-techexplorer</a></p>
+        </div>
 
-        <section class="content-section" id="achievements">
-            <h2 class="section-title">Key Achievements</h2>
-            
-            <div class="achievements-grid">
-                <!-- Achievement 1 -->
-                <div class="achievement-card">
-                    <div class="achievement-badge">
-                        <div class="medal gold">
-                            <i class="fas fa-award"></i>
-                        </div>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Blockchain Club President</h3>
-                        <span class="achievement-date">07/2024 - Present</span>
-                        <p>Conducted 3 hands-on blockchain workshops and led event planning for IKARUS, the college's annual technical fest.</p>
-                    </div>
-                </div>
+        <div class="contact-item">
+        <span>🐙</span>
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/Prabodh-09" target="_blank">/Prabodh-09</a></p>
+        </div>
 
-                <!-- Achievement 2 -->
-                <div class="achievement-card">
-                    <div class="achievement-badge">
-                        <div class="medal silver">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                    </div>
-                    <div class="achievement-content">
-                        <h3>Top-5 in Innovation Marathon</h3>
-                        <span class="achievement-date">03/2025</span>
-                        <p>Secured Top 5 position in SAP Code Innovation Marathon organized by Edunet Foundation in collaboration with TASK for the project ReviveCart.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section" id="languages">
-            <h2 class="section-title">Languages Known</h2>
-            
-            <div class="languages-list">
-                <div class="language-item">
-                    <h3>English</h3>
-                    <span class="language-proficiency">Full Professional Proficiency</span>
-                </div>
-                <div class="language-item">
-                    <h3>Telugu</h3>
-                    <span class="language-proficiency">Full Professional Proficiency</span>
-                </div>
-                <div class="language-item">
-                    <h3>Hindi</h3>
-                    <span class="language-proficiency">Full Professional Proficiency</span>
-                </div>
-                <div class="language-item">
-                    <h3>Spanish</h3>
-                    <span class="language-proficiency">Beginner Proficiency</span>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="content-section" id="contact-details">
-            <h2 class="section-title">Contact Details</h2>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Email:</h3>
-                    <p><a href="mailto:prabodhobadiah@gmail.com">prabodhobadiah@gmail.com</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>Phone Number:</h3>
-                    <p><a href="tel:+919390806798">9390806798</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>LinkedIn:</h3>
-                    <p><a href="https://linkedin.com/in/prabodh-techexplorer" target="_blank">linkedin.com/in/prabodh-techexplorer</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>GitHub:</h3>
-                    <p><a href="https://github.com/Prabodh-09" target="_blank">github.com/Prabodh-09</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>Location:</h3>
-                    <p>Hyderabad, India</p>
-                </div>
-            </div>
-        </section>
+    </div>
+    </section>
+    <div class="extras">
+    <a href="assets/Prabodh_Resume.pdf" class="resume-btn" download>📄 Download Resume</a>
+    <a href="#top" class="top-btn">🔝 Back to Top</a>
+    </div>
+    </main>
 
 
     <footer>
-        <div class="container">
-            <p> 2025 Prabodh Obadiah. All rights reserved.</p>
-        </div>
+    <p>© 2025 Prabodh Obadiah. All Rights Reserved.</p>
     </footer>
 
-    </main>
-    <script src="script.js"></script>
-    
+  <script src="script.js"></script>
 </body>
 </html>
