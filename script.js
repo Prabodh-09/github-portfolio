@@ -1,6 +1,6 @@
 // Typing Animation
 const typingElement = document.getElementById("typing");
-const texts = ["Hi, I'm Prabodh Obadiah", "Full Stack ML Engineer", "Tech Explorer | Blockchain Enthusiast"];
+const texts = ["Hi, I'm Prabodh Obadiah", "B-Tech Student","4th Year","CSE ","Interest in Emerging Technologies","Tech Explorer "];
 let i = 0, j = 0, current = "", isDeleting = false;
 
 function typeEffect() {
@@ -15,7 +15,7 @@ function typeEffect() {
     isDeleting = !isDeleting;
     if (!isDeleting) i = (i + 1) % texts.length;
   }
-  setTimeout(typeEffect, isDeleting ? 50 : 100);
+  setTimeout(typeEffect, isDeleting ? 70 : 100);
 }
 typeEffect();
 
@@ -124,17 +124,7 @@ document.querySelectorAll(".progress").forEach(bar => {
   observer.observe(bar);
 });
 // Reveal certification cards on scroll
-const certCards = document.querySelectorAll('.cert-card');
-function revealCerts() {
-  certCards.forEach(card => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top <= window.innerHeight - 100) {
-      card.classList.add('visible');
-    }
-  });
-}
-window.addEventListener('scroll', revealCerts);
-window.addEventListener('load', revealCerts);
+
 // Reveal project cards on scroll
 const projectCards = document.querySelectorAll('.project-card');
 function revealProjects() {
@@ -195,3 +185,54 @@ function revealContact() {
 }
 window.addEventListener('scroll', revealContact);
 window.addEventListener('load', revealContact);
+// Reveal education timeline on scroll
+const eduItems = document.querySelectorAll('.timeline-item');
+function revealEducation() {
+  eduItems.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top <= window.innerHeight - 100) {
+      item.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealEducation);
+window.addEventListener('load', revealEducation);
+// Scroll-triggered reveal for animated timeline
+const timelineEntries = document.querySelectorAll('.timeline-entry');
+function revealTimeline() {
+  timelineEntries.forEach(entry => {
+    const rect = entry.getBoundingClientRect();
+    if (rect.top <= window.innerHeight - 100) {
+      entry.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealTimeline);
+window.addEventListener('load', revealTimeline);
+// (Removed duplicate carousel implementation to avoid redeclaration errors)
+const carousel = document.querySelector('.sc-carousel');
+const items = document.querySelectorAll('.sc-item');
+const prev = document.querySelector('.sc-btn.prev');
+const next = document.querySelector('.sc-btn.next');
+let idx = 0;
+
+function update() {
+  items.forEach(i => i.classList.remove('active'));
+  items[idx].classList.add('active');
+  const offset = idx * (items[0].offsetWidth + 16);
+  const center = (carousel.offsetWidth - items[0].offsetWidth) / 2;
+  carousel.style.transform = `translateX(${center - offset}px)`;
+}
+
+prev.addEventListener('click', () => {
+  idx = (idx - 1 + items.length) % items.length;
+  update();
+});
+
+next.addEventListener('click', () => {
+  idx = (idx + 1) % items.length;
+  update();
+});
+
+window.addEventListener('resize', update);
+update();

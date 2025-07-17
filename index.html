@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabodh Obadiah | Portfolio</title>
   <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -13,7 +15,7 @@
 
   <!-- Header -->
   <header>
-    <div class="logo">Prabodh</div>
+    <div class="logo">Prabodh Obadiah</div>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -32,11 +34,11 @@
   <!-- Hero Section -->
   <section class="hero">
     <video autoplay muted loop id="heroVideo">
-      <source src="your-video.mp4" type="video/mp4" />
+      <source src="assets/video.mp4" type="video/mp4" />
     </video>
     <div class="hero-content">
       <h1 id="typing"></h1>
-      <p>Full Stack ML Engineer | Blockchain Lead | Innovator</p>
+      <p>B-Tech Student | Tech Enthusiast | Innovator</p>
     </div>
   </section>
 
@@ -58,64 +60,80 @@
         </div>
     </div>
     </section>
-
     <section id="education">
     <h2>Education</h2>
-    <div class="edu-timeline">
-        
-        <div class="edu-card">
-        <div class="edu-year">2022 - Present</div>
-        <div class="edu-content">
+    <div class="animated-timeline">
+
+        <div class="timeline-entry left">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
             <h3>B.Tech in CSE</h3>
-            <p>KG Reddy College Of Engineering and Technology</p>
+            <span>KG Reddy College | 2022 – Present</span>
             <p>CGPA: 8.62 / 81.5%</p>
         </div>
         </div>
 
-        <div class="edu-card">
-        <div class="edu-year">2020 - 2022</div>
-        <div class="edu-content">
-            <h3>Intermediate – MPC</h3>
-            <p>Sri Abhida Junior College</p>
+        <div class="timeline-entry right">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+            <h3>Intermediate (MPC)</h3>
+            <span>Sri Abhida Junior College | 2020 – 2022</span>
             <p>Percentage: 96.5%</p>
         </div>
         </div>
 
-        <div class="edu-card">
-        <div class="edu-year">Till 2020</div>
-        <div class="edu-content">
-            <h3>Schooling</h3>
-            <p>Don Bosco School</p>
+        <div class="timeline-entry left">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+            <h3>Schooling (SSC)</h3>
+            <span>Don Bosco School | Completed 2020</span>
             <p>Percentage: 84%</p>
         </div>
         </div>
 
     </div>
     </section>
-    <section id="skills">
+
+     <section id="skills">
     <h2>Skills</h2>
     
     <!-- Technical Skills -->
     <div class="skills-container">
         <div class="skill-box">
         <h3>Python</h3>
-        <div class="progress-bar"><div class="progress" data-percent="90%"></div></div>
+        <div class="progress-bar"><div class="progress" data-percent="80%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>C</h3>
+        <div class="progress-bar"><div class="progress" data-percent="70%"></div></div>
         </div>
         <div class="skill-box">
         <h3>HTML/CSS/JS</h3>
-        <div class="progress-bar"><div class="progress" data-percent="85%"></div></div>
+        <div class="progress-bar"><div class="progress" data-percent="75%"></div></div>
         </div>
         <div class="skill-box">
         <h3>Machine Learning</h3>
         <div class="progress-bar"><div class="progress" data-percent="80%"></div></div>
         </div>
         <div class="skill-box">
-        <h3>Blockchain</h3>
-        <div class="progress-bar"><div class="progress" data-percent="75%"></div></div>
+        <h3>Data Science</h3>
+        <div class="progress-bar"><div class="progress" data-percent="80%"></div></div>
         </div>
         <div class="skill-box">
-        <h3>Django / Node.js</h3>
-        <div class="progress-bar"><div class="progress" data-percent="70%"></div></div>
+        <h3>UI/UX</h3>
+        <div class="progress-bar"><div class="progress" data-percent="65%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>Blockchain</h3>
+        <div class="progress-bar"><div class="progress" data-percent="50%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>NodeJS</h3>
+        <div class="progress-bar"><div class="progress" data-percent="60%"></div></div>
+        </div>
+        <div class="skill-box">
+        <h3>Django</h3>
+        <div class="progress-bar"><div class="progress" data-percent="60%"></div></div>
         </div>
     </div>
 
@@ -135,6 +153,10 @@
         <h4>Problem Solving</h4>
         </div>
         <div class="soft-card">
+        <span>💡</span>
+        <h4>Creative Thinking</h4>
+        </div>
+        <div class="soft-card">
         <span>📅</span>
         <h4>Time Management</h4>
         </div>
@@ -145,44 +167,27 @@
     </div>
     </section>
 
-    <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="cert-grid">
-
-        <div class="cert-card">
-        <img src="images/sap.png" alt="SAP Certification" />
-        <div class="cert-info">
-            <h3>SAP - Emerging Technologies</h3>
-            <p>Under Code Unnati Program by SAP & TASK.</p>
+    <!-- Certificates Section -->
+    <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="simple-carousel">
+        <button class="sc-btn prev">❮❮</button>
+        <div class="sc-track">
+            <div class="sc-carousel">
+                <div class="sc-item"><img src="images/sap.png" alt=""><h3>SAP - Emerging Tech</h3></div>
+                <div class="sc-item"><img src="images/ds.jpeg" alt=""><h3>Internshala - Data Science</h3></div>
+                <div class="sc-item"><img src="images/ibm.png" alt=""><h3>IBM - Machine Learning</h3></div>
+                <div class="sc-item"><img src="images/dap.png" alt=""><h3>Data Analysis with Python</h3></div>
+                <div class="sc-item"><img src="images/mcp.png" alt=""><h3>Python Programming for Everybody</h3></div>
+                <div class="sc-item"><img src="images/pds.png" alt=""><h3>Python for DataScience 101</h3></div>
+                <div class="sc-item"><img src="images/uc.png" alt=""><h3>Microsoft Essential Skills</h3></div>
+                <div class="sc-item"><img src="images/bc.png" alt=""><h3>Blockchain Appreciation</h3></div>
+            </div>
         </div>
-        </div>
-
-        <div class="cert-card">
-        <img src="images/ds.png" alt="Internshala Data Science" />
-        <div class="cert-info">
-            <h3>Internshala - Data Science</h3>
-            <p>Certified by Skill India, NDSC, IITM Pravartak.</p>
-        </div>
-        </div>
-
-        <div class="cert-card">
-        <img src="images/ibm.png" alt="IBM Machine Learning" />
-        <div class="cert-info">
-            <h3>IBM - Machine Learning</h3>
-            <p>By IBM Skills Build & CSRBOX with internship.</p>
-        </div>
-        </div>
-
-        <div class="cert-card">
-        <img src="images/bc.png" alt="Blockchain Event" />
-        <div class="cert-info">
-            <h3>Blockchain - Certificate of Appreciation</h3>
-            <p>For organizing events, workshops, competitions.</p>
-        </div>
-        </div>
-
+        <button class="sc-btn next">❯❯</button>
     </div>
     </section>
+    <!-- Projects Section -->
     <section id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
@@ -231,6 +236,26 @@
             <span>Tech Stack: Python, scikit-learn</span>
         </div>
         </div>
+        <div class="project-card">
+        <div class="project-image">
+            <img src="images/ts.png" alt="Text Summariser" />
+        </div>
+        <div class="project-content">
+            <h3>Text Summariser</h3>
+            <p>ML model to summarize text documents using extractive summarization techniques.</p>
+            <span>Tech Stack: Python, NLTK, Scikit-learn</span>
+        </div>
+        </div>
+        <div class="project-card">
+        <div class="project-image">
+            <img src="images/st.png" alt="Speech Transcription" />
+        </div>
+        <div class="project-content">
+            <h3>Speech Transcription</h3>
+            <p>ML model to transcribe spoken language into text. Trained using deep learning techniques.</p>
+            <span>Tech Stack: Python, wav2Vec2.0, TensorFlow, Keras</span>
+        </div>
+        </div>
 
     </div>
     </section>
@@ -267,7 +292,7 @@
 
         <div class="achievement-card">
         <h3>President – Blockchain Club</h3>
-        <span class="achievement-date">Jul 2024 – Present</span>
+        <span class="achievement-date">Jul 2024 – May 2025</span>
         <p>
             Led the Blockchain Club at KG Reddy College. Conducted 3 hands-on blockchain workshops and organized the IKARUS technical fest.
         </p>
@@ -315,36 +340,37 @@
   
     <section id="contact">
     <h2>Contact</h2>
+    <p style="color:azure; font-size: 0.8rem;text-align:center">Get in touch by clicking on the icons below</p>
     <div class="contact-grid">
 
         <div class="contact-item">
-        <span>📧</span>
+        <i class="fa-solid fa-envelope-circle-check"></i>
         <h3>Email</h3>
         <p><a href="mailto:prabodhobadiah@gmail.com">prabodhobadiah@gmail.com</a></p>
         </div>
 
         <div class="contact-item">
-        <span>📞</span>
+        <i class="fa-solid fa-phone-volume"></i>
         <h3>Phone</h3>
         <p><a href="tel:+919390806798">+91 93908 06798</a></p>
         </div>
 
         <div class="contact-item">
-        <span>📍</span>
+        <i class="fa-solid fa-location-dot"></i>
         <h3>Location</h3>
         <p>Hyderabad, India</p>
         </div>
 
         <div class="contact-item">
-        <span>💼</span>
+        <i class="fa-brands fa-linkedin"></i>
         <h3>LinkedIn</h3>
-        <p><a href="https://linkedin.com/in/prabodh-techexplorer" target="_blank">/prabodh-techexplorer</a></p>
+        <p><a href="https://linkedin.com/in/prabodh-techexplorer" target="_blank">Prabodh Obadiah</a></p>
         </div>
 
         <div class="contact-item">
-        <span>🐙</span>
+        <i class="fa-brands fa-github"></i>
         <h3>GitHub</h3>
-        <p><a href="https://github.com/Prabodh-09" target="_blank">/Prabodh-09</a></p>
+        <p><a href="https://github.com/Prabodh-09" target="_blank">Prabodh's GitHub</a></p>
         </div>
 
     </div>
@@ -353,7 +379,7 @@
     <a href="assets/Prabodh_Resume.pdf" class="resume-btn" download>📄 Download Resume</a>
     <a href="#top" class="top-btn">🔝 Back to Top</a>
     </div>
-    </main>
+
 
 
     <footer>
