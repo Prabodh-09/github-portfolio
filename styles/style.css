@@ -22,7 +22,8 @@ body {
 }
 section {
   padding: 2.5rem 0;
-  
+  max-width: 1200px;
+  margin: auto;
   
 }
 h2 {
@@ -760,5 +761,31 @@ footer {
 
   footer {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-grid,
+  .skills-grid,
+  .education-timeline,
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .carousel-btn {
+    margin: 1rem 0;
+  }
+
+  .contact-item {
+    width: 90%;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
