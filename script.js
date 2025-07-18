@@ -1,6 +1,6 @@
 // Typing Animation
 const typingElement = document.getElementById("typing");
-const texts = ["Hi, I'm Prabodh Obadiah", "B-Tech Student","4th Year","CSE ","Interest in Emerging Technologies","Tech Explorer "];
+const texts = ["Hey, I'm Prabodh Obadiah","Tech Explorer ","Interest in Emerging Technologies"];
 let i = 0, j = 0, current = "", isDeleting = false;
 
 function typeEffect() {
@@ -236,3 +236,33 @@ next.addEventListener('click', () => {
 
 window.addEventListener('resize', update);
 update();
+
+// Hamburger menu toggle functionality
+const header = document.getElementById('main-header');
+const hamburger = document.getElementById('hamburger');
+const menuPopup = document.getElementById('menu-popup');
+
+// Shrink header on scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    header.classList.add('shrink');
+  } else {
+    header.classList.remove('shrink');
+    menuPopup.style.display = "none";
+  }
+});
+
+// Toggle popup
+let menuOpen = false;
+hamburger.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  menuPopup.style.display = menuOpen ? "block" : "none";
+});
+
+// Close on link click
+document.querySelectorAll('.menu-popup a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuPopup.style.display = "none";
+    menuOpen = false;
+  });
+});

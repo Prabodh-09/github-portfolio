@@ -14,9 +14,9 @@
   <canvas id="particle-canvas"></canvas>
 
   <!-- Header -->
-  <header>
+  <header id="main-header">
     <div class="logo">Prabodh Obadiah</div>
-    <nav>
+    <nav id="nav-menu">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -29,6 +29,24 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="menu-popup" id="menu-popup">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -37,6 +55,7 @@
       <source src="assets/video.mp4" type="video/mp4" />
     </video>
     <div class="hero-content">
+      <h1 style="color: white;">Welcome to My Portfolio</h1>
       <h1 id="typing"></h1>
       <p>B-Tech Student | Tech Enthusiast | Innovator</p>
     </div>
@@ -212,6 +231,7 @@
             <h3>Food Recipe Generator</h3>
             <p>ML/NLP-based web app that recommends recipes based on ingredients entered by the user. Built with KNN & text processing.</p>
             <span>Tech Stack: Python, Flask, NLP</span>
+            <a href="https://github.com/Prabodh-09/FoodRecipeGenerator" target="_blank">View on GitHub</a>
         </div>
         </div>
 
@@ -223,6 +243,7 @@
             <h3>Vision Background Removal</h3>
             <p>Deep learning model to remove backgrounds from images using segmentation and OpenCV.</p>
             <span>Tech Stack: Python, DL, OpenCV</span>
+           
         </div>
         </div>
 
@@ -234,6 +255,7 @@
             <h3>Iris Classification</h3>
             <p>ML model to classify Iris flower species based on petal/sepal dimensions. Trained using scikit-learn.</p>
             <span>Tech Stack: Python, scikit-learn</span>
+            <a href="https://github.com/Prabodh-09/PersonalProjects-classification-/blob/main/iris(task3).ipynb" target="_blank">View on GitHub</a>
         </div>
         </div>
         <div class="project-card">
@@ -244,6 +266,7 @@
             <h3>Text Summariser</h3>
             <p>ML model to summarize text documents using extractive summarization techniques.</p>
             <span>Tech Stack: Python, NLTK, Scikit-learn</span>
+            <a href="https://github.com/Prabodh-09/TextSummariser" target="_blank">View on GitHub</a>
         </div>
         </div>
         <div class="project-card">
@@ -254,6 +277,7 @@
             <h3>Speech Transcription</h3>
             <p>ML model to transcribe spoken language into text. Trained using deep learning techniques.</p>
             <span>Tech Stack: Python, wav2Vec2.0, TensorFlow, Keras</span>
+            <a href="https://github.com/Prabodh-09/SpeechRecognitionSystem" target="_blank">View on GitHub</a>
         </div>
         </div>
 
